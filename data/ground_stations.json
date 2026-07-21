@@ -1,0 +1,14 @@
+[
+  { "name": "Chicago",    "lat": 41.8781,  "lon": -87.6298 },
+  { "name": "London",     "lat": 51.5074,  "lon": -0.1278 },
+  { "name": "NewYork",    "lat": 40.7128,  "lon": -74.0060 },
+  { "name": "Tokyo",      "lat": 35.6895,  "lon": 139.6917 },
+  { "name": "Singapore",  "lat": 1.3521,   "lon": 103.8198 },
+  { "name": "Sydney",     "lat": -33.8688, "lon": 151.2093 },
+  { "name": "SaoPaulo",   "lat": -23.5505, "lon": -46.6333 },
+  { "name": "CapeTown",   "lat": -33.9249, "lon": 18.4241 },
+  { "name": "Qaanaaq",    "lat": 77.4667,  "lon": -69.2286 },
+  { "name": "Utqiagvik",  "lat": 71.2906,  "lon": -156.7886 },
+  { "name": "Honolulu",   "lat": 21.3069,  "lon": -157.8583 },
+  { "name": "Antarctica", "lat": -78.2700, "lon": -86.4600 }
+]

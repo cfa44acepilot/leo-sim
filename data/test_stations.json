@@ -1,0 +1,7 @@
+[
+  { "name": "Alpha", "lat": 40.0, "lon": -74.0, "alt": 0.01 },
+  { "name": "Bravo", "lat": 51.5, "lon": -0.1 },
+  { "name": "Alpha", "lat": 1.0, "lon": 2.0 },
+  { "name": "BadLat", "lat": 91.0, "lon": 0.0 },
+  { "name": "BadLon", "lat": 0.0, "lon": 200.0 }
+]

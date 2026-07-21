@@ -1,0 +1,29 @@
+# build artifacts
+build/
+build-monitor/
+build-renderer/
+*.exe
+*.obj
+*.o
+
+# Dear ImGui persisted window layout / scratch ini files (runtime state)
+*.ini
+
+# live data snapshot (large; refreshed via `leo update`)
+data/starlink.json
+
+# generated from leo_sim_guide.tex (uncomment to ignore the rendered PDF)
+# leo_sim_guide.pdf
+
+# editor / OS cruft
+.vscode/
+.vs/
+*.user
+.DS_Store
+
+# development scaffolding and local config - never commit
+instructions/
+.clang-format
+experimental/
+codingstyle/
+myformulas.txt
