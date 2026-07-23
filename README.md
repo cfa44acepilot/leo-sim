@@ -1,5 +1,7 @@
 # leo — LEO Satellite Constellation Routing Simulator
 
+[![CI](https://github.com/cfa44acepilot/leo-sim/actions/workflows/ci.yml/badge.svg)](https://github.com/cfa44acepilot/leo-sim/actions/workflows/ci.yml)
+
 A headless C++20 simulator for a low-Earth-orbit satellite network (modeled on
 Starlink). It loads real published orbital elements (OMM/GP JSON from CelesTrak),
 propagates every satellite to a requested instant with SGP4, reconstructs the

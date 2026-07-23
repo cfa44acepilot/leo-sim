@@ -1,0 +1,73 @@
+# CI for the LEO constellation simulator core.
+#
+# Builds the CORE ONLY (simulator library + `leo` CLI + the GoogleTest suite)
+# and runs every test. The renderer (monitor/) is left OFF, so this job needs
+# no Vulkan SDK, GLFW, or windowing stack -- see LEO_BUILD_MONITOR in the root
+# CMakeLists.txt, which defaults OFF.
+#
+# Running on ubuntu-latest is deliberate: the core has been kept OS-portable
+# from the start (file I/O only, no platform headers on the sim path), and a
+# green Linux build is the proof of that. All third-party deps (unordered_dense,
+# glm, nlohmann/json, googletest) are pulled by CMake FetchContent at configure
+# time, so no apt package is required for them; only a C++20 toolchain + CMake.
+
+name: CI
+
+# Gate merges to main: run on direct pushes to main and on any PR into it.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# One consistent config for the whole job. Linux is single-config, so the build
+# type is fixed here at configure time (Release for an optimized, representative
+# build) and referenced by name in the cache key and build step.
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Pull the repository (including third_party/sgp4, which is vendored in
+      # tree -- it is NOT a FetchContent dependency).
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ubuntu-latest already ships GCC and CMake, but pin them explicitly so a
+      # future runner image change can't silently drop the C++20 toolchain the
+      # core needs. build-essential = compiler + make; cmake drives the build.
+      - name: Install build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential cmake
+
+      # Cache ONLY the FetchContent dependencies (build/_deps: the cloned +
+      # compiled third-party libs). Our own sources live outside _deps, so this
+      # never serves a stale object for repo code. The key is tied to the root
+      # CMakeLists.txt, which pins every dependency's git tag -- so bumping a
+      # dependency version invalidates the cache and it is refetched.
+      - name: Cache FetchContent dependencies
+        uses: actions/cache@v4
+        with:
+          path: build/_deps
+          key: deps-${{ runner.os }}-${{ hashFiles('CMakeLists.txt') }}
+          restore-keys: |
+            deps-${{ runner.os }}-
+
+      # Configure with the renderer OFF (the default) so the graph is just the
+      # sim library, the CLI, and the tests. FetchContent clones any missing
+      # dependencies here.
+      - name: Configure
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE }}
+
+      # Compile the library, the `leo` executable, and all test binaries.
+      - name: Build
+        run: cmake --build build --config ${{ env.BUILD_TYPE }} -j
+
+      # Run the full suite. --output-on-failure prints the failing test's log
+      # inline, so a red run shows WHICH assertion failed, not just that one did.
+      - name: Test
+        run: ctest --test-dir build --build-config ${{ env.BUILD_TYPE }} --output-on-failure
