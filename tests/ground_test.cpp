@@ -1,3 +1,13 @@
+/*****************************************************************************
+  filename ground_test.cpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Unit tests for the ground module: WGS84 geodetic-to-ECEF placement (poles
+    and equator against known radii), appending ground nodes to the array tail,
+    and uplink visibility gated by the minimum-elevation threshold.
+ *****************************************************************************/
 // ground_test.cpp -- geodetic placement, ground-node append, uplink visibility.
 
 #include "ground.hpp"

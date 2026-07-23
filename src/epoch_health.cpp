@@ -1,3 +1,14 @@
+/*****************************************************************************
+  filename epoch_health.cpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Implements the freshness measurement: derives now as a Julian Date, scans
+    every satellite's epoch for the min/max spread and the newest-element age
+    relative to a reference, and turns those against EpochPolicy into the
+    cluster_ok / propagation_ok go/no-go flags.
+ *****************************************************************************/
 // epoch_health.cpp -- measure snapshot freshness against a reference epoch.
 
 #include "epoch_health.hpp"

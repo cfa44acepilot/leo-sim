@@ -1,3 +1,14 @@
+/*****************************************************************************
+  filename constellation.cpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Implements the Constellation container mutators (add_satellite,
+    add_ground_node, clear_ground, verify). Enforces the invariants that keep
+    the hot arrays and the cold catalog map in lockstep -- the duplicate guard,
+    the dense NodeId bridge, and the post-topology structural checks.
+ *****************************************************************************/
 // constellation.cpp -- container mutators for the hot/cold layout.
 
 #include "constellation.hpp"

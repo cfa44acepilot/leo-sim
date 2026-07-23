@@ -1,3 +1,14 @@
+/*****************************************************************************
+  filename simulator_test.cpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Unit tests for the Simulator: the three-tier wiring (load / set_endpoints /
+    step) driven with positions set by hand, the helper prerequisites, and the
+    determinism checks that run the full pipeline on a fixture twice and assert
+    byte-for-byte identical Snapshots for reachable and no-path pairs.
+ *****************************************************************************/
 // simulator_test.cpp -- prerequisites + three-tier wiring (positions by hand).
 
 #include "simulator.hpp"

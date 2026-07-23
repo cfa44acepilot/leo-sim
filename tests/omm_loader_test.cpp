@@ -1,3 +1,13 @@
+/*****************************************************************************
+  filename omm_loader_test.cpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Unit tests for the OMM JSON loader: field mapping, ISO-8601 epoch to Julian
+    Date conversion, whole-record rejection of malformed/duplicate entries, and
+    the post-load structural guarantee. Additive to constellation_test.cpp.
+ *****************************************************************************/
 // omm_loader_test.cpp -- JSON load, field mapping, epoch conversion, and the
 // post-load structural guarantee. Additive to constellation_test.cpp.
 

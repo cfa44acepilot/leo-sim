@@ -1,3 +1,13 @@
+/*****************************************************************************
+  filename cli_test.cpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Unit tests for the CLI glue in isolation from routing: argument parsing into
+    CliOptions, the "lat,lon" versus station-name detection, and endpoint
+    resolution (including the error path for an unknown station name).
+ *****************************************************************************/
 // cli_test.cpp -- argument resolution glue (routing is covered elsewhere).
 
 #include "cli.hpp"

@@ -1,3 +1,14 @@
+/*****************************************************************************
+  filename propagator.hpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Public interface to the SGP4 propagator: the standalone gmst_rad() and the
+    pImpl Propagator class (init/propagate). The pImpl keeps the vendored SGP4.h
+    confined to the .cpp so it never leaks into the rest of the build. Documents
+    the load -> build_topology -> init -> propagate ordering the sim depends on.
+ *****************************************************************************/
 // propagator.hpp
 //
 // SGP4-based propagator: advances every satellite to a simulation time (Julian

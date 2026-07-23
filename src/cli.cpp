@@ -1,3 +1,14 @@
+/*****************************************************************************
+  filename cli.cpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Implements the `leo` command-line glue: parses argv into CliOptions,
+    detects "lat,lon" versus a station name, resolves both endpoints against a
+    loaded Simulator, and provides omm_data_age_days (used by `leo update` to
+    decide whether the cached snapshot needs a re-pull).
+ *****************************************************************************/
 // cli.cpp -- argument parsing and endpoint resolution for the `leo` tool.
 
 #include "cli.hpp"

@@ -1,3 +1,14 @@
+/*****************************************************************************
+  filename fetch_starlink.cpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Standalone dev tool (built separately, not part of the sim library): pulls
+    the Starlink OMM JSON feed from CelesTrak over HTTPS via WinHTTP and writes
+    it pretty-printed to disk. Deliberately the only place networking lives, so
+    the simulator itself never depends on the network.
+ *****************************************************************************/
 // fetch_starlink.cpp
 //
 // Pulls the Starlink orbital-element feed from CelesTrak (OMM, JSON) over HTTPS

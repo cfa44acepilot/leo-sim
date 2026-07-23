@@ -1,3 +1,14 @@
+/*****************************************************************************
+  filename omm_loader.cpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Implements the OMM JSON parse: maps each record's fields to a Satellite,
+    converts ISO-8601 epochs to Julian Date, and skips any malformed or
+    duplicate record whole (never a half-populated row). Populates a
+    Constellation and returns a LoadReport tallying inserts and rejections.
+ *****************************************************************************/
 // omm_loader.cpp -- parse the cached OMM JSON and populate a Constellation.
 
 // MSVC flags std::sscanf as "unsafe"; the suggested sscanf_s is non-portable,

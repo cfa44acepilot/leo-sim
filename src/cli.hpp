@@ -1,3 +1,14 @@
+/*****************************************************************************
+  filename cli.hpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Declares the testable glue behind the `leo` command-line tool: CliOptions,
+    argument parsing, endpoint resolution (station name vs. "lat,lon"), and the
+    data-age helper. Factored out of main.cpp so this logic can be unit-tested
+    without spawning a process.
+ *****************************************************************************/
 // cli.hpp
 //
 // Argument parsing and endpoint resolution for the `leo` command-line tool.

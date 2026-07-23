@@ -1,3 +1,14 @@
+/*****************************************************************************
+  filename router.hpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Declares the Router: RouteSpec, RouteResult, and a build/dijkstra/astar
+    interface over the ISL + uplink graph. build() materializes only the
+    symmetric CSR adjacency; edge weights (light-time plus a per-hop cost) are
+    computed on the fly. A* and Dijkstra share one search core by design.
+ *****************************************************************************/
 // router.hpp
 //
 // Lowest-latency routing over the constellation graph: in-plane and cross-plane

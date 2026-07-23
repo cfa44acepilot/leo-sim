@@ -1,3 +1,13 @@
+/*****************************************************************************
+  filename propagator_test.cpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Unit tests pinning the propagator against known references: the GMST formula
+    at J2000, and the SGP4 unit conversions, epoch handling, and TEME frame
+    verified against the SGP4-VER catalog-00005 test vector to within 1 km.
+ *****************************************************************************/
 // propagator_test.cpp -- pins GMST, SGP4 units/epoch/frame against references.
 
 #include "propagator.hpp"

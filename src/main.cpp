@@ -1,3 +1,14 @@
+/*****************************************************************************
+  filename main.cpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Entry point for the `leo` command-line front end. A thin translator: parse
+    args, drive a Simulator through its tiers, and format the returned Snapshot
+    (labels, per-hop connectors, the fiber-latency comparison). Also hosts the
+    `leo update` subcommand that shells out to the fetch tool. Computes nothing.
+ *****************************************************************************/
 // main.cpp -- the `leo` command-line front end.
 //
 // Thin translator: parse args, drive the Simulator, format the returned

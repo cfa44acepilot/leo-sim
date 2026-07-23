@@ -1,3 +1,14 @@
+/*****************************************************************************
+  filename ground_stations.cpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Implements the ground-station JSON parse. Reads an array of
+    {name, lat, lon, [alt]} objects, validates each (dropping malformed or
+    duplicate-named entries), and returns the loaded stations plus a
+    StationLoadReport of counts and per-error reasons.
+ *****************************************************************************/
 // ground_stations.cpp -- parse and validate the ground-station catalog.
 
 #include "ground_stations.hpp"

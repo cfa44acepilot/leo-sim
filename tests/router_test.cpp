@@ -1,3 +1,14 @@
+/*****************************************************************************
+  filename router_test.cpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Unit tests for the Router over hand-built graphs (no SGP4): set
+    position_ecef, isl_neighbors, and ground_uplinks directly, then build() and
+    route. Covers CSR symmetry, edge feasibility gating (range and Earth
+    clearance), and the guarantee that A* and Dijkstra return equal costs.
+ *****************************************************************************/
 // router_test.cpp -- routing over hand-built graphs (no SGP4): set position_ecef,
 // isl_neighbors, and ground_uplinks directly, then build() and route.
 

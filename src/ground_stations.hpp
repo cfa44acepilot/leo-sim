@@ -1,3 +1,14 @@
+/*****************************************************************************
+  filename ground_stations.hpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Declares the ground-station catalog loader: the GroundStation record, a
+    StationLoadReport, and load_ground_stations(). This is the set of named
+    geodetic sites a query can pick as source/destination, loaded and validated
+    file-only, mirroring omm_loader's report pattern.
+ *****************************************************************************/
 // ground_stations.hpp
 //
 // Ground-station catalog loader. Reads a JSON array of named geodetic sites

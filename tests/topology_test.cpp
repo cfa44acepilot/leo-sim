@@ -1,3 +1,14 @@
+/*****************************************************************************
+  filename topology_test.cpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Unit tests for build_topology on synthetic, hand-controlled elements (never
+    the cached snapshot). Covers RAAN binning into fixed planes, the gap-mode
+    fallback, in-plane ring wiring, the raan_dot precession magnitude/sign, and
+    the altitude-band filter.
+ *****************************************************************************/
 // topology_test.cpp -- lattice scaffold from synthetic, controlled elements.
 
 #include "topology.hpp"

@@ -1,3 +1,13 @@
+/*****************************************************************************
+  filename constellation_test.cpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Unit tests for the Constellation container. Exercises the hot/cold layout
+    invariants directly: NodeId <-> catalog bridge consistency, the duplicate
+    add guard, ground-node append semantics, and the verify() structural checks.
+ *****************************************************************************/
 // constellation_test.cpp -- structural invariants of the hot/cold layout.
 
 #include "constellation.hpp"

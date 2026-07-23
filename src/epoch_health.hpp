@@ -1,3 +1,14 @@
+/*****************************************************************************
+  filename epoch_health.hpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Declares the snapshot-freshness gate: EpochPolicy thresholds, the EpochHealth
+    result, now_jd_utc(), and check_epoch_health(). Exists so a caller can refuse
+    to propagate (or warn) on stale elements -- both the tight intra-snapshot
+    spread that clustering needs and the newest-epoch age SGP4 needs.
+ *****************************************************************************/
 // epoch_health.hpp
 //
 // Snapshot freshness gate. OMM/TLE elements are only trustworthy near their

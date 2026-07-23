@@ -1,3 +1,14 @@
+/*****************************************************************************
+  filename router.cpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Builds the symmetric CSR from the ISL slots and ground uplinks (each link
+    added both ways, then sorted and deduped so asymmetric picks still route),
+    gating each sat-to-sat edge by range and Earth clearance. One lazy-deletion
+    heap search backs both dijkstra (h=0) and astar (light-time heuristic).
+ *****************************************************************************/
 // router.cpp -- symmetric CSR build + shared Dijkstra/A* search core.
 
 #include "router.hpp"

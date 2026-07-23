@@ -1,3 +1,14 @@
+/*****************************************************************************
+  filename omm_loader.hpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Interface for the portable OMM JSON loader. Declares LoadReport plus the
+    load/parse entry points and the epoch<->Julian-Date conversions. File I/O
+    only, no networking or platform headers, so the simulator reads the local
+    cached JSON identically on every platform.
+ *****************************************************************************/
 // omm_loader.hpp
 //
 // Portable loader for the cached CelesTrak OMM JSON snapshot. It does file I/O

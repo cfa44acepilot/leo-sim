@@ -1,3 +1,14 @@
+/*****************************************************************************
+  filename ground.cpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Implements the WGS84 geodetic-to-ECEF conversion and the per-tick uplink
+    visibility pass. A satellite is visible when its geocentric elevation above
+    the station clears min_elevation_deg; connect_ground_uplinks refills every
+    ground node's uplink list from the current satellite positions.
+ *****************************************************************************/
 // ground.cpp -- geodetic placement and uplink visibility for ground stations.
 
 #include "ground.hpp"

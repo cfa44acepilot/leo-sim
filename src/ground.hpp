@@ -1,3 +1,14 @@
+/*****************************************************************************
+  filename ground.hpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Declares ground endpoints and their sky view: geodetic_to_ecef() (WGS84 ->
+    the propagator's ECEF frame), the UplinkSpec elevation threshold, and
+    connect_ground_uplinks(), which recomputes each ground node's list of
+    currently visible satellites from propagated positions every tick.
+ *****************************************************************************/
 // ground.hpp
 //
 // Ground stations (source/dest endpoints) as nodes in the array tail. A ground

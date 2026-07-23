@@ -1,3 +1,13 @@
+/*****************************************************************************
+  filename epoch_health_test.cpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Unit tests for the freshness gate: builds constellations with controlled
+    epoch spreads and ages and asserts EpochHealth's measured values and the
+    cluster_ok / propagation_ok go/no-go flags against EpochPolicy thresholds.
+ *****************************************************************************/
 // epoch_health_test.cpp -- snapshot freshness measurement and go/no-go gating.
 
 #include "epoch_health.hpp"

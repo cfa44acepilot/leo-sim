@@ -1,3 +1,14 @@
+/*****************************************************************************
+  filename propagator.cpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    The only translation unit that sees the vendored Vallado SGP4. init() calls
+    sgp4init directly with each satellite's mean elements (unit-converted exactly
+    as twoline2rv), and propagate() advances to a Julian Date filling ECI (TEME)
+    position/velocity, then rotates by GMST into ECEF. gmst_rad() lives here too.
+ *****************************************************************************/
 // propagator.cpp -- SGP4 propagation. The ONLY translation unit that sees SGP4.
 
 #include "propagator.hpp"

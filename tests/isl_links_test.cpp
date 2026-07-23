@@ -1,3 +1,14 @@
+/*****************************************************************************
+  filename isl_links_test.cpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Unit tests for ISL seeding with controlled, hand-set geometry: cross-plane
+    and in-plane link selection by range, Earth clearance, and along-track
+    direction, plus the mutual-pairing rule that caps in-plane degree at two and
+    squeezes out a third contender.
+ *****************************************************************************/
 // isl_links_test.cpp -- cross-plane seeding with controlled, hand-set geometry.
 
 #include "isl_links.hpp"

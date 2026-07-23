@@ -1,3 +1,15 @@
+/*****************************************************************************
+  filename constellation.hpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Declares the core in-memory container: the hot/cold data-oriented layout.
+    Per-tick state (positions, velocities, ISL links) lives in parallel dense
+    arrays indexed by a packed NodeId, while cold identity (catalog id, orbital
+    elements) lives in a hashmap. This header defines the types every other
+    module is built on.
+ *****************************************************************************/
 // constellation.hpp
 //
 // Core in-memory data layout for the LEO constellation simulator.

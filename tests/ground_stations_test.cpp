@@ -1,3 +1,13 @@
+/*****************************************************************************
+  filename ground_stations_test.cpp
+  author Tarrant Mangasarian
+  Project Name: LEO constellation simulator
+  date 2026-07-22
+  Brief Description:
+    Unit tests for the ground-station catalog loader: parsing a well-formed JSON
+    array, defaulting optional altitude, and rejecting malformed or
+    duplicate-named entries while reporting accurate loaded/skipped counts.
+ *****************************************************************************/
 // ground_stations_test.cpp -- catalog loading and validation.
 
 #include "ground_stations.hpp"
