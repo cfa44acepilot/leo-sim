@@ -99,6 +99,7 @@ TEST(Cli, OmmDataAgeDays) {
 TEST(Cli, ResolveUnknownNameErrors) {
   Simulator sim;
   ASSERT_TRUE(sim.load(fixture("test_omm.json"), fixture("test_stations.json")));
+  ASSERT_FALSE(sim.load(fixture("test_omm.json"), fixture("test_stations.json")));
 
   std::string err;
   EXPECT_FALSE(resolve_endpoints(sim, "Alpha", "Nowhereville", err));
